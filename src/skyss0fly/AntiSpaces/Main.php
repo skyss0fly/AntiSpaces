@@ -34,7 +34,7 @@ $this->saveDefaultConfig();
 $cfg = $this->getConfig();
 $enabled = $cfg->get("Enabled");
 if ($enabled){
-$this->getLogger()->info("AntiSpaces Enabled");
+$this->getLogger()->info(TextFormat::GREEN . "AntiSpaces Enabled");
 }
 else {
 $this->getLogger()->info(TextFormat::RED . "AntiSpaces is not enabled in Config\nDisabling:(");
