@@ -39,6 +39,7 @@ else {
 $this->getLogger()->info("AntiSpaces is not enabled in Config\nDisabling:(");
 
 }
+}
 
 public function onPlayerJoin(PlayerJoinEvent $event): void {
         $player = $event->getPlayer();
