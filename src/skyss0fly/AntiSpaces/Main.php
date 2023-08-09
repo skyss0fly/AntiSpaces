@@ -37,7 +37,7 @@ $this->getLogger()->info("AntiSpaces Enabled");
 }
 else {
 $this->getLogger()->info("AntiSpaces is not enabled in Config\nDisabling:(");
-
+$this->getServer()->getPluginManager()->disablePlugin($this);
 }
 }
 
