@@ -19,10 +19,10 @@
 */
 namespace skyss0fly\AntiSpaces;
 
-use pocketmine\player\Player;
-use pocketmine\Server;
-use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\player\Player;
+use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
 
