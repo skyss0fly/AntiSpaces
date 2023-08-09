@@ -50,3 +50,4 @@ if (strpos($playername , " ")) {
 $this->getPlayer()->setDisplayName($new_str);
 }
 }
+}
