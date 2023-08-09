@@ -23,6 +23,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener {
 
@@ -36,7 +37,7 @@ if ($enabled){
 $this->getLogger()->info("AntiSpaces Enabled");
 }
 else {
-$this->getLogger()->info("AntiSpaces is not enabled in Config\nDisabling:(");
+$this->getLogger()->info(TextFormat::RED . "AntiSpaces is not enabled in Config\nDisabling:(");
 $this->getServer()->getPluginManager()->disablePlugin($this);
 }
 }
@@ -45,6 +46,7 @@ $this->getServer()->getPluginManager()->disablePlugin($this);
         $player = $event->getPlayer();
         $playerName = $player->getName();
 if (strpos($playerName , " ")) {
+    $this->getLogger()->info(TextFormat::BLUE . $playerName . " Joined the Server with a space, it has been changed:)");
 	$new_str = str_replace(' ', '_', $playerName);
 $player->setDisplayName($new_str);
 }
