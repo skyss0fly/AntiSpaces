@@ -41,13 +41,12 @@ $this->getLogger()->info("AntiSpaces is not enabled in Config\nDisabling:(");
 }
 }
 
-public function onPlayerJoin(PlayerJoinEvent $event): void {
+   public function onPlayerJoin(PlayerJoinEvent $event): void {
         $player = $event->getPlayer();
-$playername = $player->getPlayerName();
-
-if (strpos($playername , " ")) {
-	$new_str = str_replace(' ', '_', $playername);
-$this->getPlayer()->setDisplayName($new_str);
+        $playerName = $player->getName();
+if (strpos($playerName , " ")) {
+	$new_str = str_replace(' ', '_', $playerName);
+$player->setDisplayName($new_str);
 }
 }
 }
