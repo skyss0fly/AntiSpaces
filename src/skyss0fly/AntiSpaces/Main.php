@@ -27,7 +27,8 @@ use pocketmine\event\Listener;
 class Main extends PluginBase implements Listener {
 
 public function onLoad(): void {
-	$this->registerEvents($this, $this);
+	    $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    
 $this->saveDefaultConfig();
 $cfg = $this->getConfig();
 $enabled = $cfg->get("Enabled");
