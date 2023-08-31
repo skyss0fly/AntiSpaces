@@ -48,7 +48,7 @@ $this->getServer()->getPluginManager()->disablePlugin($this);
 if (strpos($playerName , " ")) {
     $this->getLogger()->info(TextFormat::BLUE . $playerName . " Joined the Server with a space, it has been changed:)");
 	$new_str = str_replace(' ', '_', $playerName);
-$player->setDisplayName($new_str);
+$player->setName($new_str);
 }
 }
 }
